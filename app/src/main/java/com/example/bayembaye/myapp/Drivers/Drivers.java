@@ -32,6 +32,11 @@ public class Drivers {
     public final static String ListDepThies []={"Mathematique et Informatique",
     "Informatique","LEA","LSEE","Hotelerie","Agronomie","LMIO","PC"};
 
+
+    /**
+     * this variable is for localhost
+     */
+    public final static String UrlName = "http://10.0.2.2/";
     /**
         THIS VARIABLE IS FOR UNICODE FORMAT SETTING WHEN WE GET OR INSERT DATA IN THE DATABASE SERVER
      */

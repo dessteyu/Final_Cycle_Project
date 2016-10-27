@@ -1,8 +1,9 @@
-package com.example.bayembaye.myapp;
+package com.example.bayembaye.myapp.activities;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
+import com.example.bayembaye.myapp.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;

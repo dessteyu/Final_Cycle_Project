@@ -18,6 +18,7 @@ import java.net.HttpURLConnection;
 import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -221,7 +222,12 @@ public class ServerRequest {
         }
         return InsertIsOk("ok");
     }
-    public JSONObject getContactOnServer(){
+
+    /**
+     * @return JSONObject
+     * this function is for the contact of a user on the server.
+     */
+    public JSONObject getContactOnServer(ArrayList<String> listNumLocalContatt){
         // TODO: 18/09/2016 make the code for getting contact on the server
         // we gonna take all friend contact in the server for fot that we gonna test
         connecting();
