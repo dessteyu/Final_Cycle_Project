@@ -14,21 +14,25 @@ public class User {
     private String pwd_user;
     private String ville_ori_user;
     private int id_ufr;
+    private String sexe;
 
     /* the constructor of user */
 
     public User (){}
 
-    public User(int id_user, int nie_user, String nom_user, String prenom_user, int tel_user, String email_user, String pwd_user, String ville_ori_user, int id_ufr) {
+    public User(int id_user, String sexe, int id_ufr, String ville_ori_user, String pwd_user,
+                int tel_user, String email_user, String prenom_user,
+                String nom_user, int nie_user) {
         this.id_user = id_user;
-        this.nie_user = nie_user;
-        this.nom_user = nom_user;
-        this.prenom_user = prenom_user;
+        this.sexe = sexe;
+        this.id_ufr = id_ufr;
+        this.ville_ori_user = ville_ori_user;
+        this.pwd_user = pwd_user;
         this.tel_user = tel_user;
         this.email_user = email_user;
-        this.pwd_user = pwd_user;
-        this.ville_ori_user = ville_ori_user;
-        this.id_ufr = id_ufr;
+        this.prenom_user = prenom_user;
+        this.nom_user = nom_user;
+        this.nie_user = nie_user;
     }
 
     public int getId_user() {
@@ -101,6 +105,14 @@ public class User {
 
     public void setNie_user(int nie_user) {
         this.nie_user = nie_user;
+    }
+
+    public String getSexe() {
+        return sexe;
+    }
+
+    public void setSexe(String sexe) {
+        this.sexe = sexe;
     }
 
     @Override

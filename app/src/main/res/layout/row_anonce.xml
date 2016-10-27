@@ -23,6 +23,6 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
-        android:id="@+id/FromUserRow" />
+        android:id="@+id/fromUserRow" />
 
 </LinearLayout>

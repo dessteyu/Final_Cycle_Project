@@ -21,12 +21,12 @@ public class SqlHelper extends SQLiteOpenHelper {
     /**
         define the name of all the tables of the database
     */
-    private final static String tableUser = "user";
-    private final static String tableUniversity = "university";
-    private final static String tableUfr = "ufr";
-    private final static String tableAmicale = "amicale";
-    private final static String tableCycle = "cycle";
-    private final static String tableAnnonce = "annonce";
+    public final static String tableUser = "user";
+    public final static String tableUniversity = "university";
+    public final static String tableUfr = "ufr";
+    public final static String tableAmicale = "amicale";
+    public final static String tableCycle = "cycle";
+    public final static String tableAnnonce = "annonce";
 
     /**
      * Columns of the table annonce
@@ -82,9 +82,9 @@ public class SqlHelper extends SQLiteOpenHelper {
      *
      * Columns of the table tableUfr
      */
-    private final static String id_ufr = "id_ufr";
-    private final static String id_ufr_univ = "id_univ";
-    private final static String name_ufr = "name_ufr";
+    public final static String id_ufr = "id_ufr";
+    public final static String id_ufr_univ = "id_univ";
+    public final static String name_ufr = "name_ufr";
 
 
 

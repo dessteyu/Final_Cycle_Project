@@ -5,11 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.bayembaye.myapp.R;
+import com.example.bayembaye.myapp.UseObjects.Anonce;
 import com.example.bayembaye.myapp.UseObjects.User;
+
+import java.util.List;
 
 /**
  * Created by bayembaye on 21/10/2016.
@@ -18,35 +23,37 @@ import com.example.bayembaye.myapp.UseObjects.User;
  */
 public class AdatatorContactView extends ArrayAdapter<User> {
 
-    public AdatatorContactView(Context context, int resource) {
-        super(context, resource);
+    public AdatatorContactView(Context context, int resource, List<User> users) {
+        super(context, resource,users);
     }
 
     //this function is for calling the position on the view
     @Override
     public View getView(int position, View recup, ViewGroup parent) {
-
+        View row = recup;
+        if (row == null) {
+            LayoutInflater li = LayoutInflater.from(parent.getContext());
+            row = li.inflate(R.layout.row_contact, parent, false);
+        }
+        //Identified the views
+       ImageView imgUser = (ImageView)recup.findViewById(R.id.imgcontactlist);
+        TextView nameUser = (TextView)recup.findViewById(R.id.viewname);
+        TextView telView = (TextView)recup.findViewById(R.id.viewTel);
+        Button findMebutton = (Button)recup.findViewById(R.id.buttonMeTrouver);
+        ////\/|////
+        ////Now we gonna use the view on the scream
+        // earlier we gonna enable the button findMe
+        findMebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(),"the toast for the find me button ",Toast.LENGTH_SHORT);
+            }
+        });
         User user = getItem(position);
-
-        LayoutInflater li = LayoutInflater.from(parent.getContext());
-        View itemView = li.inflate(R.layout.row_contact, parent, false);
-        ImageView imageView = (ImageView) itemView.findViewById(R.id.imgcontactlist);
-        TextView textView = (TextView) itemView.findViewById(R.id.viewname);
-//        imageView.setImageResource(categorie.getDrawableResId());
-//        textView.setText(categorie.getStringResId());
-        return itemView;
+        imgUser.setImageResource(R.drawable.male);
+        nameUser.setText(user.getPrenom_user()+"   "+user.getNom_user());
+        telView.setText(user.getTel_user());
+       return row;
     }
-//for setting the position of all the view of a contact
-    @Override
-    public View getDropDownView(int position, View convertView, ViewGroup parent) {
-        User user = getItem(position);
 
-        LayoutInflater li = LayoutInflater.from(parent.getContext());
-        View itemView = li.inflate(R.layout.row_contact, parent, false);
-        ImageView imageView = (ImageView) itemView.findViewById(R.id.imgcontactlist);
-        TextView textView = (TextView) itemView.findViewById(R.id.viewname);
-//        imageView.setImageResource(user.getDrawableResId());
-//        textView.setText(categorie.getStringResId());
-        return itemView;
-    }
 }
