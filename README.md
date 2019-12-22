@@ -4,7 +4,7 @@ Diaap "tenir"
 #version :
 1.0
 #Auteur:
-Baya Mbaye Badiane (bayembye10@gmail.com)
+Baya Mbaye Badiane 
 #git Name:
 dessteyu
 #Description:
